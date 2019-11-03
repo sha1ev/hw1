@@ -1,5 +1,5 @@
 #include "queue.h"
-
+//מוסיף איבר
 void enqueue(queue* q, unsigned int newValue) {
 	int i = 0;
 	if (!isFull(q)) {
@@ -10,6 +10,7 @@ void enqueue(queue* q, unsigned int newValue) {
 		q->_count++;
 	}
 }
+//מוריד איבר
 int dequeue(queue* q) {
 	int ans = -1;
 
@@ -20,12 +21,13 @@ int dequeue(queue* q) {
 	}
 	return(ans);
 }
+//פונקציית אתחול
 void initQueue(queue* q, unsigned int size) {
 	q->_count = 0;
 	q->_maxSize = size;
 	q->_elements = new int[size];
 }
-
+//פונקציית ניקוי
 void cleanQueue(queue* q) {
 	delete[] q->_elements;
 }
